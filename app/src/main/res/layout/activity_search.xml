@@ -25,11 +25,34 @@
         android:id="@+id/cauta"
         android:layout_width="132dp"
         android:layout_height="61dp"
-        android:background="@drawable/btncaut"
+        android:text="echipa 1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cand"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <Button
+        android:id="@+id/cauta2"
+        android:layout_width="132dp"
+        android:layout_height="61dp"
+        android:text="echipa 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cauta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cand"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <Button
+        android:id="@+id/cauta3"
+        android:layout_width="132dp"
+        android:layout_height="61dp"
+        android:text="echipa 3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/cauta"
         app:layout_constraintTop_toBottomOf="@+id/cand"
         app:layout_constraintVertical_bias="0.031" />
 
@@ -79,5 +102,14 @@
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/plecare" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_curse"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cauta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
