@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
 
         afisare()
 
-
     }
 
     private fun afisare(){
