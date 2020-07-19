@@ -14,7 +14,7 @@ class RegisterActivity : AppCompatActivity() {
         afisare()
     }
     private fun afisare() {
-        Login.setOnClickListener() {
+        button.setOnClickListener() {
             var verificareNume = true
             var verificareEmail = true
             var verificareTelefon = true
