@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.DatePicker
+import android.widget.LinearLayout
 import android.widget.TimePicker
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_search.*
 import java.lang.NullPointerException
 import java.util.*
@@ -33,6 +35,11 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
         pickDate()
         showData()
         schimb()
+
+        val layoutManager = LinearLayoutManager(this)
+        
+        lista_curse.layoutManager = layoutManager
+        lista_curse.adapter = AdapterCursa(listaDeCurse)
     }
 
 
@@ -73,48 +80,8 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
     private fun showData(){
 
         cauta.setOnClickListener() {
-            var p = false
-            var d = false
-            var c = false
-            if (plecare.getText().toString().equals("")) {
-                val plecnul = Toast.makeText(
-                    applicationContext,
-                    "Completați câmpul Plecare!",
-                    Toast.LENGTH_SHORT
-                )
-                plecnul.show()
-                p = true
-            }
+//            verificaCampurile()
 
-            if (destinatie.getText().toString().equals("")) {
-                val destnul = Toast.makeText(
-                    applicationContext,
-                    "Completați câmpul Destinație!",
-                    Toast.LENGTH_SHORT
-                )
-                destnul.show()
-                d = true
-            }
-
-            if (savedDay == 0 && savedMonth == 0 && savedYear == 0 && savedHour == 0 && savedMinute == 0) {
-                val candnul = Toast.makeText(
-                    applicationContext,
-                    "Completați câmpul \"Când?\"!",
-                    Toast.LENGTH_SHORT
-                )
-                candnul.show()
-                c = true
-            }
-
-            if (p == false && d == false && c == false) {
-                val toast = Toast.makeText(
-                    applicationContext,
-                    "Plecare din: " + plecare.text + "\nCu destinație în: " + destinatie.text + "\nÎn data de: $savedDay/$savedMonth/$savedYear, de la ora: $savedHour:$savedMinute",
-                    Toast.LENGTH_SHORT
-                )
-                toast.setGravity(Gravity.CENTER, 0, 200)
-                toast.show()
-            }
         }
     }
     private fun schimb()
@@ -125,5 +92,62 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
             destinatie.text=aux
         }
     }
+
+    private fun verificaCampurile() {
+        var p = false
+        var d = false
+        var c = false
+        if (plecare.getText().toString().equals("")) {
+            val plecnul = Toast.makeText(
+                applicationContext,
+                "Completați câmpul Plecare!",
+                Toast.LENGTH_SHORT
+            )
+            plecnul.show()
+            p = true
+        }
+
+        if (destinatie.getText().toString().equals("")) {
+            val destnul = Toast.makeText(
+                applicationContext,
+                "Completați câmpul Destinație!",
+                Toast.LENGTH_SHORT
+            )
+            destnul.show()
+            d = true
+        }
+
+        if (savedDay == 0 && savedMonth == 0 && savedYear == 0 && savedHour == 0 && savedMinute == 0) {
+            val candnul = Toast.makeText(
+                applicationContext,
+                "Completați câmpul \"Când?\"!",
+                Toast.LENGTH_SHORT
+            )
+            candnul.show()
+            c = true
+        }
+
+        if (p == false && d == false && c == false) {
+            val toast = Toast.makeText(
+                applicationContext,
+                "Plecare din: " + plecare.text + "\nCu destinație în: " + destinatie.text + "\nÎn data de: $savedDay/$savedMonth/$savedYear, de la ora: $savedHour:$savedMinute",
+                Toast.LENGTH_SHORT
+            )
+            toast.setGravity(Gravity.CENTER, 0, 200)
+            toast.show()
+        }
+    }
+    
+    val listaDeCurse = listOf<Cursa>(
+        Cursa("Ploiesti", "Brasov", "05:55"),
+        Cursa("Ploiesti", "Brasov", "05:55"),
+        Cursa("Ploiesti", "Brasov", "05:55"),
+        Cursa("Ploiesti", "Brasov", "05:55"),
+        Cursa("Ploiesti", "Brasov", "05:55"),
+        Cursa("Ploiesti", "Brasov", "05:55"),
+        Cursa("Ploiesti", "Brasov", "05:55"),
+        Cursa("Ploiesti", "Brasov", "05:55"),
+        Cursa("Ploiesti", "Brasov", "05:55")
+    )
 
 }
