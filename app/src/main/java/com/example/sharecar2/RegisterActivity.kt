@@ -26,31 +26,31 @@ class RegisterActivity : AppCompatActivity() {
 
 
             if (nume.length() == 0) {
-                nume.setError("Campul trebuie completat")
+                nume.setError("Numele trebuie completat")
                 verificareNume = false
             }
             if (emailregister.length() == 0) {
-                emailregister.setError("Campul trebuie completat")
+                emailregister.setError("Email-ul trebuie completat")
                 verificareEmail = false
             }
             if (phone.length() == 0) {
-                phone.setError("Campul trebuie completat")
+                phone.setError("Numarul de telefon trebuie completat")
                 verificareTelefon = false
             }
             if (acasa.length() == 0) {
-                acasa.setError("Campul trebuie completat")
+                acasa.setError("Adresa de acasa trebuie completata")
                 verificareCasa = false
             }
             if (facultate.length() == 0) {
-                facultate.setError("Campul trebuie completat")
+                facultate.setError("Adresa facultatii trebuie completata")
                 verificareFacultate = false
             }
             if (parola.length() == 0) {
-                parola.setError("Campul trebuie completat")
+                parola.setError("Parola trebuie completata")
                 verificareParola = false
             }
             if (parola2.length() == 0) {
-                parola2.setError("Campul trebuie completat")
+                parola2.setError("Parola trebuie completata")
                 verificareParola2 = false
             }
             if (parola.text != parola2.text) {
