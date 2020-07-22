@@ -34,7 +34,7 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
         pickDate()
         showData()
         schimb()
-        orase()
+        redirectCurse()
 
         val layoutManager = LinearLayoutManager(this)
         
@@ -156,5 +156,13 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
         Cursa("Ploiesti", "Brasov", "05:55"),
         Cursa("Ploiesti", "Brasov", "05:55")
     )
+    private fun redirectCurse(){
+        cauta2.setOnClickListener() {
+
+
+            val intent = Intent(this, CurseActivity::class.java)
+            startActivity(intent)
+        }
+    }
 
 }
