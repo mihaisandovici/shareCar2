@@ -7,12 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.DatePicker
-import android.widget.LinearLayout
 import android.widget.TimePicker
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_search.*
-import java.lang.NullPointerException
 import java.util.*
 
 class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
@@ -96,9 +94,9 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
     }
 
     private fun verificaCampurile() {
-        var p = false
-        var d = false
-        var c = false
+        var verificaPlecare = false
+        var verificaDestinatie = false
+        var verificaCand = false
         if (plecare.getText().toString().equals("")) {
             val plecnul = Toast.makeText(
                 applicationContext,
@@ -106,7 +104,7 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
                 Toast.LENGTH_SHORT
             )
             plecnul.show()
-            p = true
+            verificaPlecare = true
         }
 
         if (destinatie.getText().toString().equals("")) {
@@ -116,7 +114,7 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
                 Toast.LENGTH_SHORT
             )
             destnul.show()
-            d = true
+            verificaDestinatie = true
         }
 
         if (savedDay == 0 && savedMonth == 0 && savedYear == 0 && savedHour == 0 && savedMinute == 0) {
@@ -126,10 +124,10 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
                 Toast.LENGTH_SHORT
             )
             candnul.show()
-            c = true
+            verificaCand = true
         }
 
-        if (p == false && d == false && c == false) {
+        if (verificaPlecare == false && verificaDestinatie == false && verificaCand == false) {
             val toast = Toast.makeText(
                 applicationContext,
                 "Plecare din: " + plecare.text + "\nCu destinație în: " + destinatie.text + "\nÎn data de: $savedDay/$savedMonth/$savedYear, de la ora: $savedHour:$savedMinute",
@@ -139,7 +137,14 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
             toast.show()
         }
     }
-    
+
+    private fun orase(){
+        cauta3.setOnClickListener {
+            val intent = Intent(this, OraseActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
     val listaDeCurse = listOf<Cursa>(
         Cursa("Ploiesti", "Brasov", "05:55"),
         Cursa("Ploiesti", "Brasov", "05:55"),
