@@ -32,16 +32,11 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        val btnCauta = findViewById<Button>(R.id.cauta)
-        btnCauta.setOnClickListener {
-            startUsersScreen()
-        }
-
-
-        pickDate()
         showData()
+        pickDate()
         schimb()
         redirectCurse()
+        orase()
 
         val layoutManager = LinearLayoutManager(this)
         
@@ -92,8 +87,8 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
     private fun showData(){
 
         cauta.setOnClickListener() {
-//            verificaCampurile()
-
+//            trebuie sa fie commentat
+            startUsersScreen()
         }
     }
 

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "36624679750",
+    "firebase_url": "https://sharecar2-ca979.firebaseio.com",
+    "project_id": "sharecar2-ca979",
+    "storage_bucket": "sharecar2-ca979.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36624679750:android:e9ec3bb1d2a17647b51b47",
+        "android_client_info": {
+          "package_name": "com.example.sharecar2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36624679750-pu0m8j3pea1qe1qhbp6pfbcee88ltr4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharecar2",
+            "certificate_hash": "1cf86f92b931c1d4f66d7000954399e96814480e"
+          }
+        },
+        {
+          "client_id": "36624679750-16phvq42f0m82ggb9gisejo9o96fj3hr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjNpOWUYF9meE5DTl0Bo-XaNIAHcsxxYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36624679750-16phvq42f0m82ggb9gisejo9o96fj3hr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
