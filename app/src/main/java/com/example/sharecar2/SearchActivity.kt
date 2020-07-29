@@ -10,7 +10,11 @@ import android.widget.*
 import android.widget.DatePicker
 import android.widget.TimePicker
 import android.widget.Toast
+import androidx.annotation.Nullable
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_search.*
 import java.util.*
 
@@ -27,6 +31,10 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
     var savedYear=0
     var savedHour=0
     var savedMinute=0
+
+    val auth = FirebaseAuth.getInstance()
+    val database = FirebaseDatabase.getInstance().reference
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +53,8 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
 
         val email = intent.getStringExtra(LoginActivity.EMAIL_CODE)
         Toast.makeText(this, email, Toast.LENGTH_LONG).show()
+
+
     }
 
     private fun startUsersScreen()

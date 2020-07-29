@@ -3,11 +3,15 @@ package com.example.sharecar2
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_curse.*
 import kotlinx.android.synthetic.main.activity_search.*
 
 
 class CurseActivity : AppCompatActivity() {
+
+    val database = FirebaseDatabase.getInstance().reference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_curse)
@@ -15,6 +19,28 @@ class CurseActivity : AppCompatActivity() {
 
         lista_curse_2.layoutManager = layoutManager
         lista_curse_2.adapter = AdapterDetaliiCurse(listaCurse)
+
+        add_curse.setOnClickListener{
+            addCurseInDatabase()
+        }
+    }
+
+    fun addCurseInDatabase() {
+
+        val curseRef = database.child("curse")
+
+        var id = 0
+        listaCurse.map { cursa ->
+            val key = curseRef.push().key ?: ""
+            curseRef.child(key).setValue(cursa)
+            id++
+        }
+
+//        for (i in 0 until listaCurse.size) {
+//            listaCurse[i]
+//        }
+
+        val ref = database.child("curse")
     }
 
     val listaCurse = listOf<CurseEchipa2>(
@@ -29,4 +55,3 @@ class CurseActivity : AppCompatActivity() {
         CurseEchipa2("Ploiesti", "Constanta","17:23","432 lei")
     )
 }
-
