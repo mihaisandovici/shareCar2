@@ -42,6 +42,9 @@ class SearchActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, 
         
         lista_curse.layoutManager = layoutManager
         lista_curse.adapter = AdapterCursa(listaDeCurse)
+
+        val email = intent.getStringExtra(LoginActivity.EMAIL_CODE)
+        Toast.makeText(this, email, Toast.LENGTH_LONG).show()
     }
 
     private fun startUsersScreen()

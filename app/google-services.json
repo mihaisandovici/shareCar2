@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "36624679750",
-    "firebase_url": "https://sharecar2-ca979.firebaseio.com",
-    "project_id": "sharecar2-ca979",
-    "storage_bucket": "sharecar2-ca979.appspot.com"
+    "project_number": "74710703749",
+    "firebase_url": "https://sharecar2.firebaseio.com",
+    "project_id": "sharecar2",
+    "storage_bucket": "sharecar2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:36624679750:android:e9ec3bb1d2a17647b51b47",
+        "mobilesdk_app_id": "1:74710703749:android:f8279e9932435e8c6d93ec",
         "android_client_info": {
           "package_name": "com.example.sharecar2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "36624679750-pu0m8j3pea1qe1qhbp6pfbcee88ltr4s.apps.googleusercontent.com",
+          "client_id": "74710703749-ertba8tv3nikjfv51mukjq4uhjalfkdn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.sharecar2",
-            "certificate_hash": "1cf86f92b931c1d4f66d7000954399e96814480e"
+            "certificate_hash": "9cf4eb3e5642665192a2f15e3f9a364b0826a98c"
           }
         },
         {
-          "client_id": "36624679750-16phvq42f0m82ggb9gisejo9o96fj3hr.apps.googleusercontent.com",
+          "client_id": "74710703749-5raprvpv462m6fhs5k0vm3uf3h7ia3fk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBjNpOWUYF9meE5DTl0Bo-XaNIAHcsxxYE"
+          "current_key": "AIzaSyAvPkn35gHCRGm8JWJUW0mKVOSo35OUgJg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "36624679750-16phvq42f0m82ggb9gisejo9o96fj3hr.apps.googleusercontent.com",
+              "client_id": "74710703749-5raprvpv462m6fhs5k0vm3uf3h7ia3fk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
