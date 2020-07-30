@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ShareCar2</string>
+    <string name="pret">Pret</string>
+    <string name="distanta">Distanta</string>
+    <string name="oras_plecare">Oras plecare</string>
+    <string name="oras_sosire">Oras sosire</string>
+    <string name="ora">Ora</string>
+    <string name="button">Button</string>
 </resources>

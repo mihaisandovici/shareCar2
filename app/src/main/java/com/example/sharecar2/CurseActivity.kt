@@ -1,9 +1,13 @@
 package com.example.sharecar2
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_add_cursa.*
 import kotlinx.android.synthetic.main.activity_curse.*
 import kotlinx.android.synthetic.main.activity_search.*
 
@@ -23,6 +27,10 @@ class CurseActivity : AppCompatActivity() {
         add_curse.setOnClickListener{
             addCurseInDatabase()
         }
+        addCursa.setOnClickListener{
+            addCursaInDbScreen()
+        }
+
     }
 
     fun addCurseInDatabase() {
@@ -42,6 +50,11 @@ class CurseActivity : AppCompatActivity() {
 
         val ref = database.child("curse")
     }
+    fun addCursaInDbScreen() {
+        val intent = Intent(this,AddCursa::class.java)
+        startActivity(intent)
+    }
+
 
     val listaCurse = listOf<CurseEchipa2>(
         CurseEchipa2("Banesti", "Brasov", "05:30","123 lei"),
