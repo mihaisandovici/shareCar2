@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowOrasActivity"></activity>
+        <activity android:name=".AddOrasActivity"/>
+        <activity android:name=".ShowOrasActivity" />
         <activity android:name=".OraseActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SearchActivity"/>
-        <activity android:name=".UsersClass" ></activity>
-        <activity android:name=".ShowCurseActivity" ></activity>
-        <activity android:name=".CurseActivity"></activity>
-        <activity android:name=".DetailsUsers"></activity>
-        <activity android:name=".AddCursa"></activity>
+        <activity android:name=".AddCursa"/>
+        <activity android:name=".UsersClass" />
+        <activity android:name=".ShowCurseActivity" />
+        <activity android:name=".CurseActivity" />
+        <activity android:name=".DetailsUsers" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
