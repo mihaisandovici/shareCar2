@@ -17,6 +17,7 @@
         <activity android:name=".ShowCurseActivity" ></activity>
         <activity android:name=".CurseActivity"></activity>
         <activity android:name=".DetailsUsers"></activity>
+        <activity android:name=".AddCursa"></activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
